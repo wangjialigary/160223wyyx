@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html">
+	<title>网易免费邮箱-中国第一大电子邮件服务商</title>
+	<meta name="description" content="网易免费邮箱--中国第一大电子邮件服务商，提供以@163.com、@126.com和yeah.net为后缀的免费邮箱。16年邮箱运营经验，系统快速稳定，垃圾邮件拦截率超过98%，邮箱容量自动翻倍，支持高达2G超大附件，免费提供网盘及手机邮箱服务。">
+	<mate name="keywords" content="邮件，邮箱，电子邮件，电子邮箱，网易邮箱，163邮箱，126邮箱，yeah邮箱，免费邮箱，mail，email，网盘">
+	<link rel="shortcut icon" href="favicon.ico"/>
+	<link rel="stylesheet" href="style/reset.css"/>
+	<link rel="stylesheet" href="style/email.css"/>
+</head>
+<body class="mail-163">
+	<div class="page" id="page">
+		<header>
+			<div class="bg"></div>
+			<div class="inner">
+				<h1>
+					<a href="#" targrt="_blank">
+						<img src="images/ntes_logo.png" alt="网易NetEase" width="87px" height="27">
+					</a>
+				</h1>
+				<p class="ext"> 
+					<a href="#" class="link" target="_blank" title="收费邮">收费邮</a>
+					<a href="#" class="link" target="_blank" title="企业邮箱">企业邮箱</a>
+					<a href="#" class="link" target="_blank" title="国外用户登录">国外用户登录</a>
+					<a href="#" class="link" target="_blank" style="position:relative;">学生用户登陆
+                        <b class="ico ico-new"></b>
+					</a>
+					<a href="#" class="link" target="_blank">手机客户端</a>
+					<a href="#" class="link" target="_blank">帮助</a>
+				</p>
+			</div>
+		</header>
+		<div class="main" id="main">
+			<div class="inner">
+				<h3 id="mainHd"></h3>
+				<!--错误提示浮沉-->
+				<div id="errorAlert">
+					<div id="errorAlert" class="errorAlert-show"></div>
+					<div id="errorAlert" class="error-arrow"></div>
+					<div class="error-hd"></div>
+					<div class="error-mid">
+						<div class="error-tt">
+							<p id="errorTitle">账号或密码错误</p>
+						</div>
+						<div id="errorDetail" class="error-detail">
+							<p id="errorInfo" class="error-info">
+								1.请检查账号拼写，是否输入有误
+								<br/>
+								2.若账号长期未登陆，可能已被注销，请
+								<a href="#" target="_blank">重新注册</a>
+								<br/>
+								3.若您忘记密码，请
+								<a href="#" target="_blank">找回密码</a>
+								<br/>
+								4.若您需要锁定此账号，请
+								<a href="#" target="_blank">点击这里</a>
+								<br/>
+								5.若手机号码邮箱的手机号已更换，可
+								<a href="#" target="_blank">找回原账号</a>
+							</p>
+						</div>
+					</div>
+					<div class="error-ft"></div>
+				</div>
+				<div class="tab">
+					<div class="tab-list">
+						<ul>
+							<li class="item item-163" id="tab163Link">
+								<div class="logo">
+									<b class="ico ico-logo ico-logo-163"></b>
+								</div>
+								<div class="bg"></div>
+								<div class="bg-selected"></div>
+							</li>
+							<li class="item item-126" id="tab126Link">
+								<div class="logo">
+									<b class="ico ico-logo ico-logo-126"></b>
+								</div>
+								<div class="bg"></div>
+								<div class="bg-selected"></div>
+							</li>
+							<li class="item item-shouji" id="tabyeahLink">
+								<div class="logo">
+									<b class="ico ico-logo ico-logo-yeah"></b>
+								</div>
+								<div class="bg"></div>
+								<div class="bg-selected"></div>
+							</li>
+							<li class="item item-shouji" id="tabshoujiLink">
+								<div class="logo">
+									<b class="ico ico-logo ico-logo-shouji"></b>
+								</div>
+								<div class="bg"></div>
+								<div class="bg-selected"></div>
+							</li>
+						</ul>
+					</div>
+					<div class="tab-panel">
+						<div class="form">
+							<h2 class="hd" id="LoginTitle"></h2>
+							<form class="bd" name="frmLogin" method="post" id="loginForm" onsubmit=" " target="frameforlogin">
+							    <!--账号-->
+								<div class="ipt ipt-t user showPlaceholder" id="idInputLine">
+									<b class="ico"></b>
+									<input type="text" id="userNameIpt" autocomplete="off">
+									<b class="domain" id="domainText">@163.com</b>
+									<label for="userNameIpt" class="placeholder" id="idPlaceholder">账号或手机号</label>
+								</div>
+								<!--密码-->
+								<div class="ipt ipt-t user showPlaceholder" id="idInputLine">
+									<input type="password" name="password" id="pwdInputline">
+									<button id="btnSubmit" class="btn btn-login" type="submit"></button>
+									<label for="pwdInput" class="placeholder" id="pwdPlaceholder">密码</label>
+									<p id="capsLockHint">大写状态开启</p>
+								</div>
+								<!-- 其它选项 -->
+								<div class="options">
+									<label for="rmbUser" class="ipt-wraper ipt-wraper-checked">
+										<input type="checkbox" tabindex="5" class="ipt ipt-c" id="rmbUser">
+										<b class="ico ico-checkbox"></b>
+										记住账号
+									</label>
+									<label for="chkSSL" class="ipt-wraper ipt-wraper-checked">
+										<input type="checkbox" class="ipt ipt-c" id="chkSSL">
+										<b class="ico ico-checkbox"></b>
+										SSL安全登录
+										<a href="#" class="help" id="lnkWhySSL" target="_blank" title="什么是SSL登陆" tabindex="6">
+											<img src="./images/t.gif" alt="" class="ico ico-why" alt="什么是SSL登陆">
+										</a>
+									</label>
+									<a href="#" class="ext" id="forGetPassword" target="_blank">忘记密码</a>
+								</div>
+								<div class="ft" id="loginFootTipsVer">
+									<span class="ft-mailver-text">邮箱版本：</span>
+									<a href="javascript:void(0)" id="ftVerSelLink" class="ft-mailver-now">
+										<span id="ftVerSelLinkTxt">默认版本&nbsp</span>
+										<div id="ftDarr" class="ft-mailver-darr">
+											<i></i>
+											<i></i>
+											<i></i>
+										</div>
+									</a>
+								</div>
+								<div class="ft-ext" id="loginFootTipsRight">
+									<a href="#" target="_blank" tabindex="9">注册网易免费邮</a>
+								</div>
+							</form>
+							<div class="mailApp">
+								<a href="#" class="mailApp-logo" target="_blank"></a>
+							</div>
+						</div>
+						<b class="tab-panel-locat"></b>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 推广 -->
+		<div class="expasion">
+			<div class="inner">
+				<ul class="extText" id="extText">
+					<li class="ext-1">
+						<span>·</span>
+						<a href="#" target="_blank">签到送豪礼！人人有份！</a>
+					</li>
+					<li class="ext-2">
+						<span>·</span>
+						<a href="#" target="_blank">OSMO相机独家免费申领中！</a>
+					</li>
+					<li class="ext-3">
+						<span>·</span>
+						<a href="#" target="_blank">【推荐】不用记账的记账APP</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<footer class="copyright">
+			<div class="bg"></div>
+			<div class="inner">
+				<ul class="copy-list">
+					<li class="copy-item">
+						<a href="#" target="_blank">网易首页</a>
+					</li>
+					<li class="copy-item">
+						<a href="#" target="_blank">关于网易免费邮</a>
+					</li>
+					<li class="copy-item">
+						<a href="#" target="_blank">一元夺宝</a>
+					</li>
+					<li class="copy-item">
+						<a href="#" target="_blank">网易·有钱</a>
+					</li>
+					<li class="copy-item">
+						<a href="#" target="_blank">网易严选</a>
+					</li>
+					<li class="copy-item">
+						<a href="#" target="_blank">隐私政策</a>
+					</li>
+					<li class="copy-item">
+						<span class="sptln">|</span>
+						网易公司版权所有©1997-2016
+					</li>
+					<li class="copy-item copy-item-img">
+					    <a href="#" class="KX_IMG" target="_blank">
+					    	<img src="./images/knet.png" alt="可信网站，身份验证">
+					    </a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+		<div class="theme" id="theme"></div>
+		<iframe src="" frameborder="0" class="httploginframe" id="frameforlogin"></iframe>
+		<img src="" alt="">
+	</div>
+</body>
+</html>
